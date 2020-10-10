@@ -148,6 +148,22 @@ public void randomPlay()
         playTrack (index);
     }
 } 
+/**
+ * Method to play each track from the track list only once in
+ * random order
+ */
+public void playShuffledTracks()
+{
+    ArrayList<track> newTracks = tracks;
+    Collections.shuffle(newTracks);
+    for(int i = 0; i <= newTracks.size() - 1; i = i + 1)
+    { 
+        Track track = newTracks.ger(i);
+        System.out.println("Now playing: " + track.getArtist()
+        + track.getTitle());
+        player.playSample(track.getFilename());
+    }
+}
     /**
      * Determine whether the given index is valid for the collection.
      * Print an error message if it is not.
