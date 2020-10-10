@@ -154,7 +154,7 @@ public void randomPlay()
  */
 public void playShuffledTracks()
 {
-    ArrayList<track> newTracks = tracks;
+    ArrayList<tracks> newTracks = tracks;
     Collections.shuffle(newTracks);
     for(int i = 0; i <= newTracks.size() - 1; i = i + 1)
     { 
