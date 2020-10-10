@@ -154,11 +154,11 @@ public void randomPlay()
  */
 public void playShuffledTracks()
 {
-    ArrayList<tracks> newTracks = tracks;
+    ArrayList<Track> newTracks = tracks;
     Collections.shuffle(newTracks);
     for(int i = 0; i <= newTracks.size() - 1; i = i + 1)
     { 
-        Track track = newTracks.ger(i);
+        Track track = newTracks.get(i);
         System.out.println("Now playing: " + track.getArtist()
         + track.getTitle());
         player.playSample(track.getFilename());
